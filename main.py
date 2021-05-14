@@ -4,6 +4,7 @@ from locators import locator
 from csv import reader
 from selenium.webdriver.support.ui import Select
 import random
+import time
 
 driver = webdriver.Chrome(ChromeDriverManager().install())
 driver.implicitly_wait(10)
@@ -33,6 +34,8 @@ with open('data.csv') as csvfile:
         driver.find_element(*locator["password"]).send_keys(row[6])
 
         driver.find_element(*locator["submit_Button"]).click()
+        
+        time.sleep(3)
 
 
 
