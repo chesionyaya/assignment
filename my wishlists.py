@@ -17,7 +17,7 @@ driver.find_element_by_xpath("/html/body/div[1]/div[2]/div/div[3]/div/div/div[2]
 
 driver.find_element_by_xpath("/html/body/div/div[2]/div/div[3]/div/div/div[2]/ul/li/a/span").click()
 
-with open('cart.csv') as csvfile:
+with open('mywishlists.csv') as csvfile:
     csvreader = reader(csvfile, delimiter=',')
     for row in csvreader:
 
